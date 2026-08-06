@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@theme inline {
+  /* Delaris Brand Colors */
+  --color-delaris-red: #E6003C;
+  --color-delaris-yellow: #FAB900;
+  --color-delaris-red-dark: #A00A28;
+  --color-delaris-red-light: #F5A5A0;
+  --color-delaris-yellow-dark: #E19100;
+  --color-delaris-yellow-light: #FFE6BE;
+  
+  /* Fontes da Marca */
+  --font-sansita: "Sansita", sans-serif;
+  --font-muli: "Muli", "Geist Variable", sans-serif;
+
+  /* Shadcn UI Color Mappings */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+}
+
+:root {
+  /* Shadcn UI Variables Mapped to Delaris (using HSL as required by Tailwind/Shadcn) */
+  --background: 0 0% 100%;
+  --foreground: 348 88% 15%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 348 88% 15%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 348 88% 15%;
+  
+  --primary: 344 100% 45%; 
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 44 100% 49%;
+  --secondary-foreground: 348 88% 33%;
+  
+  --muted: 37 100% 87%;
+  --muted-foreground: 348 88% 33%;
+  
+  --accent: 4 77% 79%;
+  --accent-foreground: 348 88% 33%;
+  
+  --destructive: 348 88% 33%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 37 100% 87%;
+  --input: 37 100% 87%;
+  --ring: 344 100% 45%;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 348 88% 10%;
+  --foreground: 37 100% 87%;
+  
+  --card: 348 88% 15%;
+  --card-foreground: 37 100% 87%;
+  
+  --popover: 348 88% 15%;
+  --popover-foreground: 37 100% 87%;
+  
+  --primary: 344 100% 45%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 44 100% 49%;
+  --secondary-foreground: 348 88% 15%;
+  
+  --muted: 348 88% 20%;
+  --muted-foreground: 4 77% 79%;
+  
+  --accent: 348 88% 25%;
+  --accent-foreground: 37 100% 87%;
+  
+  --destructive: 4 77% 79%;
+  --destructive-foreground: 348 88% 15%;
+  
+  --border: 348 88% 25%;
+  --input: 348 88% 25%;
+  --ring: 44 100% 49%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-muli);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sansita);
+  }
+}
