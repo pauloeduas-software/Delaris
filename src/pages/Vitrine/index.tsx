@@ -5,7 +5,7 @@ import { CartSidebar } from "./components/CartSidebar";
 
 export function VitrinePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden">
       <VitrineNavbar />
       <VitrineHero />
       <ProductGrid />

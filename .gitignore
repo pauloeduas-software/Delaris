@@ -7,7 +7,16 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Dependencies
+node_modules/
+
+# Gerenciadores de pacote (Bloquear locks para forçar NPM)
+bun.lock
+bun.lockb
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
 dist
 dist-ssr
 *.local
@@ -22,3 +31,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Env files (Chaves de API)
+.env
+.env.*
+!.env.example
